@@ -12,4 +12,7 @@ RUN apt-add-repository -y ppa:mutlaqja/ppa
 RUN apt-get update
 
 #Instalamos INDI Library con todos los third party drivers
-RUN apt-get install -y indi-full gsc
+#RUN apt-get install -y indi-full gsc
+
+#Instalamos INDI Library con los drivers basicos
+RUN apt-get install -y libindi1 indi-bin
