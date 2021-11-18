@@ -3,19 +3,19 @@ version: "3.9"
 services:
         
         ccd_simulator:
-                image: ubuntu-indilib
+                image: juanmimm/ubuntu-indilib-server-basic
                 ports:
                   - 8000:8000
                 command: indiserver -p 8000 indi_simulator_ccd
         
         telescope_simulator:
-                image: ubuntu-indilib
+                image: juanmimm/ubuntu-indilib-server-basic
                 ports:
                   - 8001:8001
                 command: indiserver -p 8001 indi_simulator_telescope
         
         focus_simulator:
-                image: ubuntu-indilib
+                image: juanmimm/ubuntu-indilib-server-basic
                 ports:
                   - 8002:8002
                 command: indiserver -p 8002 indi_simulator_focus
