@@ -3,19 +3,19 @@ version: "3.9"
 services:
         
         ccd_simulator:
-                image: juanmimm/ubuntu-indilib-server-basic
+                image: ubuntu_indigo
                 ports:
                   - 8000:8000
-                command: indiserver -p 8000 indi_simulator_ccd
+                command: indigo_server -p 8000 indigo_ccd_simulator
         
-        telescope_simulator:
-                image: juanmimm/ubuntu-indilib-server-basic
+        gps_simulator:
+                image: ubuntu_indigo
                 ports:
                   - 8001:8001
-                command: indiserver -p 8001 indi_simulator_telescope
+                command: indigo_server -p 8001 indigo_gps_simulator
         
-        focus_simulator:
-                image: juanmimm/ubuntu-indilib-server-basic
+        rotator_simulator:
+                image: ubuntu_indigo
                 ports:
                   - 8002:8002
-                command: indiserver -p 8002 indi_simulator_focus
+                command: indigo_server -p 8002 indigo_rotator_simulator
