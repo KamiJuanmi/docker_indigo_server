@@ -17,9 +17,7 @@ You can find the image in https://hub.docker.com/repository/docker/juanmimm/ubun
 
 You can find the image already created (with 3rd party drivers) in https://hub.docker.com/repository/docker/juanmimm/ubuntu-indilib-server.
 
-# Docker compose for multiple devices
+# docker-compose-mult-ccd.yml, crea_dc.py and lanza_docker.py
 
-The file _.yaml_ contains the code to execute a simulator of multiple parts using IndiGo. It recreates a real situation where you have every component in a different server. The components simulated are:
-* Rotator
-* CCD
-* GPS
+The file _.yml_ contains the code to execute a simulator of multiple ccd using IndiGo. In order to test some functions of the client it was needed multiple ccds so instead of writing by hand, the _.yml_ file is created by _crea\_dc.py_ which writes the code for N ccds, it receives N from _lanza\_docker.py_. This basic script checks if the file is already for N ccds, applying simple logic with the number of lines of the file, and if it needs more or less calls _crea\_dc.py_ and launches all the containers; Otherwise it would launch the containers without overwriting the file again.
+Note: Right now the maximum of N is 10 since I don't need more than that.

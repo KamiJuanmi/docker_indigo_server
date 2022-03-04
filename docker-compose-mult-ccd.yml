@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  ccd_simulator_0:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8000:8000
+    command : indigo_server -p 8000 indigo_ccd_simulator
+  ccd_simulator_1:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8001:8001
+    command : indigo_server -p 8001 indigo_ccd_simulator
+  ccd_simulator_2:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8002:8002
+    command : indigo_server -p 8002 indigo_ccd_simulator
+  ccd_simulator_3:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8003:8003
+    command : indigo_server -p 8003 indigo_ccd_simulator
+  ccd_simulator_4:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8004:8004
+    command : indigo_server -p 8004 indigo_ccd_simulator
+  ccd_simulator_5:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8005:8005
+    command : indigo_server -p 8005 indigo_ccd_simulator
+  ccd_simulator_6:
+    image: juanmimm/ubuntu-indigo
+    ports:
+      - 8006:8006
+    command : indigo_server -p 8006 indigo_ccd_simulator
